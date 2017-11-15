@@ -56,7 +56,11 @@ def pcm() # passive components menu
       puts "     A"
       puts "C=E*---"
       puts "     d"
-
+      puts ""
+      puts "The energy stored in a capacitor is given by:"
+      puts "   1   2"
+      puts "E=---CV"
+      puts "   2"
   end
 end
 
@@ -64,6 +68,18 @@ end
 def lrcm() # lrc components menu
   system("clear")
   puts "LRC networks"
+  puts "1.----L-----R-----C------"
+  puts "2.-----------------"
+  puts "      |     |     |"
+  puts "      L     R     C"
+  puts "      |     |     |"
+  puts "  -----------------"
+  input = gets.chomp
+  system("clear")
+  unless(input=='1'||input=='2'||input=='3')#if incorrect
+    puts"Incorrect input"
+    lrcm()
+  end
 end
 
 def drawMenu()#draw initial menu
